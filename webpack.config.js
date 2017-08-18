@@ -10,11 +10,8 @@ module.exports = {
   plugins: [
     new webpack.optimize.UglifyJsPlugin({
       compress: {
-        dead_code: true,
-      },
-      output: {
-        comments: false,
-      },
+        dead_code: true, // this tells the plugin to remove dead code (tree shaking)
+      }
     })
   ],
   module: {
@@ -27,7 +24,7 @@ module.exports = {
           presets: [
             ['latest', {
               es2015: {
-                modules: false
+                modules: false // we need to prevent module transformation
               }
             }]
           ]
