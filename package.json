@@ -1,0 +1,25 @@
+{
+  "name": "webpack-tree-shacking",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kettanaito/webpack-tree-shaking.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kettanaito/webpack-tree-shaking/issues"
+  },
+  "homepage": "https://github.com/kettanaito/webpack-tree-shaking#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.1",
+    "babel-preset-latest": "^6.24.1",
+    "webpack": "^3.5.5"
+  }
+}

@@ -9,11 +9,30 @@ module.exports = {
   },
   plugins: [
     new webpack.optimize.UglifyJsPlugin({
-      uglifyOptions: {
-        compress: {
-        dead_code: true
+      compress: {
+        dead_code: true,
+      },
+      output: {
+        comments: false,
+      },
+    })
+  ],
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader',
+        options: {
+          presets: [
+            ['latest', {
+              es2015: {
+                modules: false
+              }
+            }]
+          ]
         }
       }
-    })
-  ]
+    ]
+  }
 };
